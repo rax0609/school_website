@@ -57,7 +57,7 @@ const schoolsData = [
         name: '國立政治大學',
         websites: [
             { url: 'https://www.nccu.edu.tw', description: '政治大學首頁' },
-            { url: 'https://elearning.nccu.edu.tw', description: '政治大學 e-Learning' },
+            { url: 'https://i.nccu.edu.tw/Login.aspx', description: '政治大學 愛政大(校園個人化入口)' },
             { url: 'https://www.lib.nccu.edu.tw', description: '政治大學 圖書館' }
         ]
     },
