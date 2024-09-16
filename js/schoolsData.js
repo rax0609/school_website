@@ -1,7 +1,7 @@
 // schoolsData.js
 const schoolsData = [
     {
-        name: '臺灣大學',
+        name: '國立臺灣大學',
         websites: [
             { url: 'https://www.ntu.edu.tw', description: '臺灣大學首頁' },
             { url: 'https://my.ntu.edu.tw/', description: '臺灣大學 MyNTU' },
@@ -11,21 +11,21 @@ const schoolsData = [
         ]
     },
     {
-        name: '成功大學',
+        name: '國立成功大學',
         websites: [
             { url: 'https://www.ncku.edu.tw', description: '成功大學首頁' },
             { url: 'https://eportfolio.ncku.edu.tw', description: '成功大學 EPortfolio' }
         ]
     },
     {
-        name: '清華大學',
+        name: '國立清華大學',
         websites: [
             { url: 'https://www.nthu.edu.tw', description: '清華大學首頁' },
             { url: 'https://moodle.nthu.edu.tw', description: '清華大學 Moodle' }
         ]
     },
     {
-        name: '陽明交通大學',
+        name: '國立陽明交通大學',
         websites: [
             { url: 'https://www.nctu.edu.tw', description: '陽明交通大學首頁' },
             { url: 'https://portal.nycu.edu.tw/', description: '陽明交通大學 校務行政系統' }
