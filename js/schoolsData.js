@@ -73,8 +73,8 @@ const schoolsData = [
         name: '國立臺灣科技大學',
         websites: [
             { url: 'https://www.ntust.edu.tw', description: '臺灣科技大學首頁' },
-            { url: 'https://elearn.ntust.edu.tw', description: '臺灣科技大學 eLearn' },
-            { url: 'https://lib.ntust.edu.tw', description: '臺灣科技大學 圖書館' }
+            { url: 'https://i.ntust.edu.tw/student', description: '臺灣科技大學 校務行政系統(學生)' },
+            { url: 'https://library.ntust.edu.tw/', description: '臺灣科技大學 圖書館' }
         ]
     },
     {
