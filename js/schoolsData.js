@@ -34,7 +34,7 @@ const schoolsData = [
     {
         name: '南臺科技大學',
         websites: [
-            { url: 'https://www.nutn.edu.tw', description: '南臺科技大學首頁' },
+            { url: 'https://www.stust.edu.tw/', description: '南臺科技大學首頁' },
             { url: 'https://eportal.stust.edu.tw/', description: '南臺科技大學 E網通' },
             { url: 'https://portal.stust.edu.tw/abs_stu/checkin.asp', description: '南臺科技大學 請假系統' },
             { url: 'https://course.stust.edu.tw/CourSel/Login.aspx', description: '南臺科技大學 選課系統' },
