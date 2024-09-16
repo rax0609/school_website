@@ -25,10 +25,10 @@ const schoolsData = [
         ]
     },
     {
-        name: '交通大學',
+        name: '陽明交通大學',
         websites: [
-            { url: 'https://www.nctu.edu.tw', description: '交通大學首頁' },
-            { url: 'https://elearn.nctu.edu.tw', description: '交通大學 Moodle' }
+            { url: 'https://www.nctu.edu.tw', description: '陽明交通大學首頁' },
+            { url: 'https://portal.nycu.edu.tw/', description: '陽明交通大學 校務行政系統' }
         ]
     },
     {
