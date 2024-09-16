@@ -33,12 +33,12 @@
 
 1. 複製此專案到您的本地：
    ```bash
-   git clone https://github.com/rax0609/taiwan-universities-portal.git
+   git clone https://github.com/rax0609/school_website.git
    ```
 
 2. 進入專案目錄：
    ```bash
-   cd taiwan-universities-portal
+   cd school_website
    ```
 
 3. 使用瀏覽器打開 `index.html`，或通過本地伺服器進行運行。
@@ -53,7 +53,7 @@
 
 ## 演示
 
-您可以查看專案的線上演示：[範例演示](https://school.futuracept.com)
+您可以查看專案的線上演示：[網站演示](https://school.futuracept.com/))
 
 ## 貢獻
 
@@ -62,38 +62,3 @@
 ## 授權
 
 此專案基於 MIT 授權，詳見 [LICENSE](LICENSE) 檔案。
-
-### 步驟來推送到 GitHub
-
-1. **建立專案目錄**：確保你的專案目錄結構如下：
-   ```
-   /taiwan-universities-portal
-   ├── css/
-   │   └── styles.css
-   ├── js/
-   │   ├── schoolsData.js
-   │   └── script.js
-   ├── index.html
-   ├── schools.html
-   ├── README.md
-   └── LICENSE
-   ```
-
-2. **推送到 GitHub**：
-
-   1. 如果尚未建立 GitHub 倉庫，請在 GitHub 上建立新倉庫。
-   2. 在你的本地專案目錄中初始化 Git 並推送到 GitHub：
-
-      ```bash
-      git init
-      git add .
-      git commit -m "Initial commit"
-      git remote add origin https://github.com/rax0609/taiwan-universities-portal.git
-      git branch -M main
-      git push -u origin main
-      ```
-
-3. **GitHub Pages 部署**：
-   - 前往 GitHub 倉庫的設定頁面。
-   - 找到 "GitHub Pages" 設定，將 source 設為 `main` 分支的 `/ (root)`。
-   - 保存，您的專案將被部署在 `https://你的使用者名稱.github.io/taiwan-universities-portal`。
