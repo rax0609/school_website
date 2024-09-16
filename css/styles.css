@@ -1,0 +1,248 @@
+/* 基本樣式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* 導覽列基本樣式 */
+nav {
+    background-color: #222;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* 左側 Logo 和名稱 */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-left span {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* 右側連結樣式 */
+.nav-right a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
+/* 手機螢幕下的側邊欄樣式 */
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    background-color: #575757;
+}
+
+/* 伸縮欄按鈕 */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* 小螢幕下顯示漢堡按鈕 */
+@media (max-width: 640px) {
+    .nav-right {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+/* 搜尋欄樣式 */
+#searchInput {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #00bcd4;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #222;
+    outline: none;
+}
+
+#searchInput:focus {
+    border-color: #008c9e;
+}
+
+/* 學校卡片樣式 */
+.schools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.school-card {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.school-card:hover {
+    transform: scale(1.05);
+}
+
+.school-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.school-card button {
+    margin-top: 10px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.school-card button:hover {
+    background-color: #008c9e;
+}
+
+/* 美化按鈕 */
+button {
+    background-color: #00bcd4;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #008c9e;
+}
+
+/* 美化下拉選單 */
+select {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #00bcd4;
+    border-radius: 5px;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:hover {
+    border-color: #008c9e;
+}
+
+/* 下拉選單選項 */
+option {
+    background-color: #111;
+    color: white;
+}
+
+/* 卡片式條款頁面佈局 */
+.terms-container, .privacy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.terms-card, .privacy-card {
+    background-color: #222;
+    color: white;
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    line-height: 1.6;
+}
+
+.terms-card h1, .terms-card h2, .privacy-card h1, .privacy-card h2 {
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+.terms-card p, .privacy-card p {
+    margin-bottom: 15px;
+}
+
+.terms-card ul, .privacy-card ul {
+    margin: 10px 0 20px 20px;
+}
+
+.terms-card a, .privacy-card a {
+    color: #00bcd4;
+    text-decoration: underline;
+}
+
+/* 調整容器的間距 */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#schoolSelect {
+    margin-bottom: 20px;
+}

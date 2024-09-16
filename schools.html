@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇你的學校</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- 導覽列 -->
+    <nav>
+        <div class="nav-left">
+            <img src="public/logo.png" alt="Logo">
+            <span>大專院校網站</span>
+        </div>
+        <span class="hamburger" onclick="openNav()">&#9776;</span>
+        <div class="nav-right">
+            <a href="index.html">首頁</a>
+            <a href="schools.html">選擇學校</a>
+            <a href="terms.html">服務條款</a>
+            <a href="privacy.html">隱私權條款</a>
+        </div>
+    </nav>
+
+    <!-- 右側側邊欄 -->
+    <div id="mySidenav" class="side-nav">
+        <a href="javascript:void(0)" onclick="closeNav()">&#10005; 關閉</a>
+        <a href="index.html">首頁</a>
+        <a href="schools.html">選擇學校</a>
+        <a href="terms.html">服務條款</a>
+        <a href="privacy.html">隱私權條款</a>
+    </div>
+
+    <div class="container">
+        <h1>選擇你的學校</h1>
+        <input type="text" id="searchInput" placeholder="搜尋學校..." onkeyup="filterSchools()">
+        <div id="schoolsList" class="schools-grid"></div>
+    </div>
+
+    <script src="js/schoolsData.js"></script> <!-- 引用學校資料 -->
+    <script src="js/script.js"></script> <!-- 主功能邏輯 -->
+</body>
+</html>
