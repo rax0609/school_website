@@ -53,7 +53,7 @@
 
 ## 演示
 
-您可以查看專案的線上演示：[GitHub Pages 連結]（此處替換為你的 GitHub Pages 網址）
+您可以查看專案的線上演示：[範例演示](school.futuracept.com)
 
 ## 貢獻
 
