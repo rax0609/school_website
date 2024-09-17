@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臺灣大專院校網站查詢系統</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- 導覽列 -->
+    <nav>
+        <div class="nav-left">
+            <img src="logo.png" alt="Logo">
+            <span>臺灣大專院校網站查詢系統</span>
+        </div>
+        <span class="hamburger" onclick="openNav()">&#9776;</span>
+        <div class="nav-right">
+            <a href="index.html">首頁</a>
+            <a href="schools.html">選擇學校</a>
+            <a href="terms.html">服務條款</a>
+            <a href="privacy.html">隱私權條款</a>
+        </div>
+    </nav>
+
+    <!-- 右側側邊欄 -->
+    <div id="mySidenav" class="side-nav">
+        <a href="javascript:void(0)" onclick="closeNav()">&#10005; 關閉</a>
+        <a href="index.html">首頁</a>
+        <a href="schools.html">選擇學校</a>
+        <a href="terms.html">服務條款</a>
+        <a href="privacy.html">隱私權條款</a>
+    </div>
+
+    <div class="container">
+        <h1>歡迎來到臺灣大專院校網站查詢系統</h1>
+        <p>此網頁旨在為學生和訪客提供一個整合平台</br>快速訪問台灣各大專院校的數位系統和資源。</br>點擊下方按鈕開始使用本網頁</p>
+        <button onclick="window.location.href='schools.html'">開始使用</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
