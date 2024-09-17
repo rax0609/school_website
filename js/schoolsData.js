@@ -50,7 +50,8 @@ const schoolsData = [
         websites: [
             { url: 'https://www.nsysu.edu.tw', description: '中山大學首頁' },
             { url: 'https://sis.nsysu.edu.tw', description: '中山大學 學務綜合資訊平台' },
-            { url: 'https://lis.nsysu.edu.tw', description: '中山大學 圖書館' }
+            { url: 'https://lis.nsysu.edu.tw', description: '中山大學 圖書館' },
+            { url: 'https://selcrs.nsysu.edu.tw/', description: '中山大學 選課系統' }
         ]
     },
     {
