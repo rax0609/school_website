@@ -14,14 +14,17 @@ const schoolsData = [
         name: '國立成功大學',
         websites: [
             { url: 'https://www.ncku.edu.tw', description: '成功大學首頁' },
-            { url: 'https://eportfolio.ncku.edu.tw', description: '成功大學 EPortfolio' }
+            { url: 'https://i.ncku.edu.tw/', description: '成功大學 成功入口' },
+            { url: 'https://futureplus.ncku.edu.tw/ncku_fsp/', description: '成功大學 futureplus' },
+            { url: 'https://course.ncku.edu.tw/', description: '成功大學 課程資訊及選課系統' }
         ]
     },
     {
         name: '國立清華大學',
         websites: [
             { url: 'https://www.nthu.edu.tw', description: '清華大學首頁' },
-            { url: 'https://moodle.nthu.edu.tw', description: '清華大學 Moodle' }
+            { url: 'https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/', description: '清華大學 校務資訊系統' },
+            { url: 'https://curricul.site.nthu.edu.tw/', description: '清華大學 課務組' }
         ]
     },
     {
@@ -29,20 +32,6 @@ const schoolsData = [
         websites: [
             { url: 'https://www.nctu.edu.tw', description: '陽明交通大學首頁' },
             { url: 'https://portal.nycu.edu.tw/', description: '陽明交通大學 校務行政系統' }
-        ]
-    },
-    {
-        name: '南臺科技大學',
-        websites: [
-            { url: 'https://www.stust.edu.tw/', description: '南臺科技大學首頁' },
-            { url: 'https://eportal.stust.edu.tw/', description: '南臺科技大學 E網通' },
-            { url: 'https://portal.stust.edu.tw/abs_stu/checkin.asp', description: '南臺科技大學 請假系統' },
-            { url: 'https://course.stust.edu.tw/CourSel/Login.aspx', description: '南臺科技大學 選課系統' },
-            { url: 'https://flipclass.stust.edu.tw/', description: '南臺科技大學 FlipClass' },
-            { url: 'http://lib.stust.edu.tw/', description: '南臺科技大學 圖書館' },
-            { url: 'https://portal.stust.edu.tw/studclub/Login.aspx', description: '南臺科技大學 社團課程管理系統' },
-            { url: 'https://portal.stust.edu.tw/CourseWaived/Login.aspx', description: '南臺科技大學 學分抵免系統' },
-            { url: 'https://webap.stust.edu.tw/pwd/Index.aspx', description: '南臺科技大學 校務帳號密碼啟用/變更入口系統' }
         ]
     },
     {
@@ -77,6 +66,20 @@ const schoolsData = [
             { url: 'https://www.ntust.edu.tw', description: '臺灣科技大學首頁' },
             { url: 'https://i.ntust.edu.tw/student', description: '臺灣科技大學 校務行政系統(學生)' },
             { url: 'https://library.ntust.edu.tw/', description: '臺灣科技大學 圖書館' }
+        ]
+    },
+    {
+        name: '南臺科技大學',
+        websites: [
+            { url: 'https://www.stust.edu.tw/', description: '南臺科技大學首頁' },
+            { url: 'https://eportal.stust.edu.tw/', description: '南臺科技大學 E網通' },
+            { url: 'https://portal.stust.edu.tw/abs_stu/checkin.asp', description: '南臺科技大學 請假系統' },
+            { url: 'https://course.stust.edu.tw/CourSel/Login.aspx', description: '南臺科技大學 選課系統' },
+            { url: 'https://flipclass.stust.edu.tw/', description: '南臺科技大學 FlipClass' },
+            { url: 'http://lib.stust.edu.tw/', description: '南臺科技大學 圖書館' },
+            { url: 'https://portal.stust.edu.tw/studclub/Login.aspx', description: '南臺科技大學 社團課程管理系統' },
+            { url: 'https://portal.stust.edu.tw/CourseWaived/Login.aspx', description: '南臺科技大學 學分抵免系統' },
+            { url: 'https://webap.stust.edu.tw/pwd/Index.aspx', description: '南臺科技大學 校務帳號密碼啟用/變更入口系統' }
         ]
     },
     {
