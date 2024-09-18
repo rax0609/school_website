@@ -21,19 +21,21 @@ nav {
 /* 左側 Logo 和名稱 */
 .nav-left {
     display: flex;
-    align-items: center;
+    align-items: center; /* 垂直居中對齊圖片與文字 */
 }
 
 .nav-left img {
     width: 40px;
     height: 40px;
-    margin-right: 10px;
+    margin-right: 10px; /* 圖片和文字之間的間距 */
+    vertical-align: middle; /* 保持圖片與文字的垂直對齊 */
 }
 
 .nav-left span {
     font-size: 20px;
     font-weight: bold;
     color: white;
+    vertical-align: middle; /* 保持文字與圖片的垂直對齊 */
 }
 
 /* 右側連結樣式 */
