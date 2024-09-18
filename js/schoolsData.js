@@ -31,7 +31,9 @@ const schoolsData = [
         name: '國立陽明交通大學',
         websites: [
             { url: 'https://www.nctu.edu.tw', description: '陽明交通大學首頁' },
-            { url: 'https://portal.nycu.edu.tw/', description: '陽明交通大學 校務行政系統' }
+            { url: 'https://portal.nycu.edu.tw/', description: '陽明交通大學 校務行政系統' },
+            { url: 'https://course.nycu.edu.tw/', description: '陽明交通大學 選課系統' },
+            { url: 'https://www.lib.nycu.edu.tw/', description: '陽明交通大學 圖書館' }
         ]
     },
     {
