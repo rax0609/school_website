@@ -85,6 +85,15 @@ const schoolsData = [
         ]
     },
     {
+        name: '龍華科技大學',
+        websites: [
+            { url: 'https://www.lhu.edu.tw', description: '龍華科技大學首頁' },
+            { url: 'https://eportal.lhu.edu.tw/index.do', description: '龍華科技大學 校務行政系統' },
+            { url: 'https://e-learning.lhu.edu.tw/mooc/index.php', description: '龍華科技大學 數位學習平台' },
+            { url: 'https://il.lhu.edu.tw/', description: '龍華科技大學 圖書館' }
+        ]
+    },
+    {
         name: '臺北醫學大學',
         websites: [
             { url: 'https://www.tmu.edu.tw', description: '臺北醫學大學首頁' },
