@@ -71,6 +71,16 @@ const schoolsData = [
         ]
     },
     {
+        name: '國立屏東科技大學',
+        websites: [
+            { url: 'https://www.npust.edu.tw', description: '屏東科技大學首頁' },
+            { url: 'https://course.npust.edu.tw/CnAds/', description: '屏東科技大學 校務行政系統' },
+            { url: 'https://course.npust.edu.tw/Course/', description: '屏東科技大學 選課系統' },
+            { url: 'https://osas.npust.edu.tw/alltop/', description: '屏東科技大學 通行證申請系統' },
+            { url: 'https://lib2.npust.edu.tw/', description: '屏東科技大學 圖書館' }
+        ]
+    },
+    {
         name: '南臺科技大學',
         websites: [
             { url: 'https://www.stust.edu.tw/', description: '南臺科技大學首頁' },
