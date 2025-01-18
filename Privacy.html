@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隱私權政策 - 台灣大專院校快速導航</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --bg-color: #f3f4f6;
+            --card-bg: rgba(255, 255, 255, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #a5b4fc, #60a5fa);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .card ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+            padding-left: 1rem;
+        }
+
+        .card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>隱私權政策</h1>
+            <p>台灣大專院校快速導航擴充功能</p>
+        </header>
+
+        <div class="card">
+            <h2>1. 資料收集與使用</h2>
+            <p>本擴充功能僅收集必要的資訊以提供服務：</p>
+            <ul>
+                <li>目前瀏覽分頁的 URL（僅用於判斷是否為大學網站）</li>
+                <li>暫時性的瀏覽狀態（儲存於本地）</li>
+                <li>使用者的偏好設定（儲存於本地）</li>
+            </ul>
+            <p>我們不會收集、儲存或傳輸任何個人識別資訊。</p>
+        </div>
+
+        <div class="card">
+            <h2>2. 權限使用說明</h2>
+            <h3>tabs 權限</h3>
+            <ul>
+                <li>用於偵測目前分頁的網址</li>
+                <li>開啟新分頁顯示大學系統</li>
+                <li>在相關頁面顯示快速存取按鈕</li>
+            </ul>
+            <h3>storage 權限</h3>
+            <ul>
+                <li>儲存暫時性的瀏覽狀態</li>
+                <li>保存大學系統的本地資料</li>
+                <li>儲存使用者偏好設定</li>
+            </ul>
+            <h3>activeTab 權限</h3>
+            <ul>
+                <li>在當前分頁注入導航介面</li>
+                <li>確保擴充功能只在相關網站運作</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>3. 資料安全性</h2>
+            <p>我們採取以下措施確保資料安全：</p>
+            <ul>
+                <li>所有程式碼皆封裝於擴充功能中</li>
+                <li>不使用遠端程式碼</li>
+                <li>僅使用本地儲存功能</li>
+                <li>限制存取範圍僅限大學網域</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>4. 第三方服務</h2>
+            <p>本擴充功能僅使用：</p>
+            <ul>
+                <li>Font Awesome CDN（用於顯示圖示）</li>
+            </ul>
+            <p>除此之外，不會使用任何其他第三方服務或外部資源。</p>
+        </div>
+
+        <div class="card">
+            <h2>5. 使用者權利</h2>
+            <p>作為使用者，您擁有以下權利：</p>
+            <ul>
+                <li>隨時移除擴充功能</li>
+                <li>清除本地儲存的資料</li>
+                <li>控制擴充功能的權限設定</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>6. 更新政策</h2>
+            <p>我們保留更新本隱私權政策的權利。重大更新時，將透過以下方式通知：</p>
+            <ul>
+                <li>擴充功能更新說明</li>
+                <li>Chrome 線上應用程式商店的說明頁面</li>
+            </ul>
+        </div>
+
+        <footer class="footer">
+            <p>最後更新時間：2025年1月18日</p>
+            <p>如有任何問題，請透過 Chrome 線上應用程式商店聯絡我們</p>
+        </footer>
+    </div>
+</body>
+</html>
