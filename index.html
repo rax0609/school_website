@@ -1,21 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="「臺灣大專院校網站查詢系統」是一個整合了台灣各大專院校數位資源的平臺，專為學生、教職員以及訪客設計。通過此網站，用戶可以快速訪問各大學的學習管理系統（LMS）、圖書館入口及行政系統。網站提供響應式設計，支援桌面與行動裝置瀏覽，並具有簡單易用的搜尋功能，讓用戶能夠快速找到所需的大學資訊。">
-  <title>Futuracept - Welcome</title>
-  <link rel="stylesheet" href="css/style1.css">
-  <link rel="icon" href="logo.ico" type="image/x-icon"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="「臺灣大專院校網站查詢系統」是一個整合了台灣各大專院校數位資源的平臺，專為學生、教職員以及訪客設計。通過此網站，用戶可以快速訪問各大學的學習管理系統（LMS）、圖書館入口及行政系統。">
+    <title>大專院校資源整合平台 - Futuracept</title>
+    <link rel="icon" href="logo.png" type="image/png"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                        opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #splash-screen.fade-out {
+            opacity: 0;
+            transform: scale(1.1);
+        }
+
+        .content-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                        opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .content-wrapper.fade-out {
+            opacity: 0;
+            transform: translate(-50%, -60%);
+        }
+
+        .logo-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .logo-circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            box-shadow: 
+                0 0 20px rgba(255, 255, 255, 0.1),
+                inset 0 0 20px rgba(255, 255, 255, 0.05);
+        }
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: url('logo.png') center center no-repeat;
+            background-size: cover;
+        }
+
+        .logo-ring {
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .logo-ring::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border: 2px solid transparent;
+            border-top: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            animation: rotate 3s linear infinite;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards 0.2s;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards 0.4s;
+        }
+
+        .loading-container {
+            width: 200px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards 0.6s;
+        }
+
+        .loading-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .loading-progress {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #4a90e2, #67b26f);
+            border-radius: 2px;
+            animation: loading 2.5s ease-in-out forwards;
+        }
+
+        .loading-text {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.1;
+            transition: opacity 0.8s ease;
+        }
+
+        .background.fade-out {
+            opacity: 0;
+        }
+
+        .grid {
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes loading {
+            0% { width: 0%; }
+            20% { width: 20%; }
+            40% { width: 40%; }
+            60% { width: 60%; }
+            80% { width: 80%; }
+            100% { width: 100%; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 0.1; }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .description {
+                font-size: 0.9rem;
+            }
+
+            .logo-container {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .description {
+                font-size: 0.8rem;
+            }
+
+            .logo-container {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div id="splash-screen">
-    <div class="content">
-      <h1>Futuracept</h1>
-      <p>Pioneering the Future</p>
+    <div id="splash-screen">
+        <div class="background">
+            <div class="grid"></div>
+        </div>
+        <div class="content-wrapper">
+            <div class="logo-container">
+                <div class="logo-circle">
+                    <div class="logo"></div>
+                    <div class="logo-ring"></div>
+                </div>
+            </div>
+            <h1>Futuracept</h1>
+            <p class="tagline">臺灣大專院校資源整合平台</p>
+            <p class="description">
+                整合全台大專院校數位資源，提供便捷的校園系統訪問體驗。
+                讓您輕鬆連結校園服務，實現智慧校園生活。
+            </p>
+            <div class="loading-container">
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+                <div class="loading-text">載入中...</div>
+            </div>
+        </div>
     </div>
-  </div>
-  <script src="js/script1.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                // 添加淡出動畫類
+                document.querySelector('#splash-screen').classList.add('fade-out');
+                document.querySelector('.content-wrapper').classList.add('fade-out');
+                document.querySelector('.background').classList.add('fade-out');
+                
+                // 等待動畫完成後再跳轉
+                setTimeout(() => {
+                    window.location.href = 'main.html';
+                }, 800); // 與 CSS transition 時間相匹配
+            }, 3000);
+        });
+    </script>
 </body>
 </html>
