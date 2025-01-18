@@ -1,66 +1,116 @@
-# 台灣大專院校系統入口網站
+# 台灣大專院校查詢系統
 
-歡迎來到台灣大專院校系統入口網站！此專案旨在為學生和訪客提供一個整合平台，快速訪問台灣各大專院校的數位系統和資源。
+![GitHub](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## 特色
+一個美觀且實用的台灣大專院校網站查詢系統，提供流暢的使用體驗和直觀的介面設計。
 
-- **響應式設計**：支援各種螢幕尺寸，自適應桌面與行動裝置。
-- **搜尋系統**：內建搜尋功能，方便快速查找大學。
-- **卡片佈局**：使用現代卡片式佈局，展示各大學的數位資源。
-- **快速訪問各大學平台**：可快速訪問每個大學的學習管理系統（LMS）、圖書館入口與行政系統。
+## 🌟 功能特色
 
-## 涵蓋的大專院校
+- **即時搜尋**：快速篩選學校名稱和相關網站
+- **精美卡片設計**：採用現代化的卡片式設計
+- **毛玻璃效果**：運用 backdrop-filter 實現時尚的磨砂玻璃效果
+- **流暢動畫**：
+  - 頁面載入動畫
+  - 卡片展開動畫
+  - 網站列表漸入效果
+- **響應式設計**：完美支援各種裝置尺寸
+- **直觀操作**：簡單易用的使用者介面
 
-本平台目前涵蓋以下院校的系統：
-- 國立台灣大學（NTU）
-- 國立成功大學（NCKU）
-- 國立清華大學（NTHU）
-- 國立交通大學（NCTU）
-- 國立中山大學（NSYSU）
-- 國立政治大學（NCCU）
-- 國立台灣師範大學（NTNU）
-- 國立台灣科技大學（NTUST）
-- 國立屏東科技大學（NPUST）
-- 臺北醫學大學（TMU）
-- 南臺科技大學（STUST）
-- 龍華科技大學（LHU）
+## 🛠️ 技術實現
 
-## 如何開始
+- HTML5
+- CSS3 (使用現代特性如 Grid, Flexbox, 動畫)
+- JavaScript (原生 JS，無需框架)
+- Font Awesome 圖示
+- 毛玻璃效果 (backdrop-filter)
 
-### 需求
+## 📦 安裝說明
 
-要在本地運行此專案，您只需要一個網頁瀏覽器和基本的本地伺服器。
-
-### 安裝
-
-1. 複製此專案到您的本地：
-   ```bash
-   git clone https://github.com/rax0609/school_website.git
-   ```
+1. 克隆專案到本地：
+```bash
+git clone https://github.com/rax0609/school_website.git
+```
 
 2. 進入專案目錄：
-   ```bash
-   cd school_website
-   ```
+```bash
+cd taiwan-university-finder
+```
 
-3. 使用瀏覽器打開 `index.html`，或通過本地伺服器進行運行。
+3. 使用瀏覽器開啟 `index.html` 檔案，或使用本地伺服器運行：
+```bash
+# 使用 Python 建立簡單的 HTTP 伺服器
+python -m http.server 8000
+```
 
-### 專案結構
+## 🎯 使用方法
 
-- `index.html`: 首頁，包含搜尋系統與大學列表。
-- `schools.html`: 以卡片式佈局顯示各大學及其數位資源的頁面。
-- `css/styles.css`: 包含響應式設計和樣式的 CSS 檔案。
-- `js/script.js`: 包含顯示和篩選大學的邏輯程式碼。
-- `js/schoolsData.js`: 包含所有大學資料（名稱、URL、系統資訊）。
+1. 在搜尋框輸入關鍵字即可搜尋學校
+2. 點擊學校卡片可查看詳細資訊
+3. 點擊網站連結可直接訪問對應網站
+4. 使用關閉按鈕或點擊外部區域可返回列表視圖
 
-## 演示
+## 🔧 自定義設定
 
-您可以查看專案的線上演示：[網站演示](https://school.futuracept.com/)
+### 新增學校資料
 
-## 貢獻
+在 `script` 標籤中的 `schoolsData` 陣列中添加新的學校資料：
 
-非常歡迎您貢獻此專案！若有任何改進建議，請提交 Pull Request 或開啟 Issue。
+```javascript
+{
+    name: '學校名稱',
+    websites: [
+        { 
+            url: '網站網址', 
+            description: '網站描述' 
+        }
+    ]
+}
+```
 
-## 授權
+### 修改視覺風格
 
-此專案基於 MIT 授權，詳見 [LICENSE](LICENSE) 檔案。
+可以通過修改 CSS 變數來調整主要視覺風格：
+
+```css
+:root {
+    --primary-bg: #0a0a0a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --text-color: #e0e0e0;
+    --border-color: rgba(255, 255, 255, 0.05);
+}
+```
+
+## 📱 瀏覽器支援
+
+- Chrome (推薦)
+- Firefox
+- Safari
+- Edge
+- Opera
+
+※ 需要現代瀏覽器才能支援毛玻璃效果
+
+## 🤝 貢獻指南
+
+1. Fork 此專案
+2. 建立新的功能分支：`git checkout -b feature/AmazingFeature`
+3. 提交更改：`git commit -m 'Add some AmazingFeature'`
+4. 推送到分支：`git push origin feature/AmazingFeature`
+5. 開啟一個 Pull Request
+
+## 📄 授權協議
+
+此專案使用 MIT 授權 - 查看 [LICENSE](LICENSE) 檔案了解詳細資訊
+
+## 🙋 常見問題
+
+**Q: 為什麼某些瀏覽器看不到毛玻璃效果？**  
+A: 毛玻璃效果使用 `backdrop-filter` 屬性，需要現代瀏覽器支援。
+
+**Q: 如何添加新的學校？**  
+A: 在 `schoolsData` 陣列中按照既定格式添加新的學校資料即可。
+
+## 🌟 致謝
+
+- [Font Awesome](https://fontawesome.com/) - 提供優質圖示
+- [Google Fonts](https://fonts.google.com/) - 提供字體支援
