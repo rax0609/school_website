@@ -11,17 +11,94 @@ Disallow: /private/
 Disallow: /*.json$
 Disallow: /*?*
 
-# 允許特定搜尋引擎完整索引
+# Google 相關爬蟲
 User-agent: Googlebot
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+# Microsoft 相關爬蟲
 User-agent: Bingbot
 Allow: /
 
+User-agent: MSNBot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+# Yahoo 相關爬蟲
+User-agent: Slurp
+Allow: /
+
+# DuckDuckGo 爬蟲
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex 相關爬蟲
+User-agent: Yandex
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: YandexImages
+Allow: /
+
+# Baidu 相關爬蟲
 User-agent: Baiduspider
 Allow: /
 
-# 設定爬蟲訪問頻率
+User-agent: Baiduspider-image
+Allow: /
+
+# Naver 相關爬蟲
+User-agent: Naverbot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+# 社群媒體爬蟲
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# 其他重要爬蟲
+User-agent: Applebot
+Allow: /
+
+User-agent: Sogou
+Allow: /
+
+User-agent: Qwantify
+Allow: /
+
+User-agent: Exabot
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+User-agent: archive.org_bot
+Allow: /
+
+# 設定爬蟲訪問頻率（針對通用爬蟲）
 Crawl-delay: 10
 
 # XML Sitemap
