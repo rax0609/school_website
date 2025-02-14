@@ -102,4 +102,4 @@ Allow: /
 Crawl-delay: 10
 
 # XML Sitemap
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://school.futuracept.com/sitemap.xml
