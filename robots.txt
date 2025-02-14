@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+Allow: /sitemap.xml
+
+# 禁止爬蟲訪問的路徑
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*
+
+# 允許特定搜尋引擎完整索引
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# 設定爬蟲訪問頻率
+Crawl-delay: 10
+
+# XML Sitemap
+Sitemap: https://your-domain.com/sitemap.xml
