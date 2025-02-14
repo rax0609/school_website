@@ -1,0 +1,22 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- 首頁（載入動畫） -->
+  <url>
+      <loc>https://school.futuracept.com/</loc>
+      <lastmod>2025-02-14</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+  </url>
+
+  <!-- 主頁面（大學列表） -->
+  <url>
+      <loc>https://school.futuracept.com/main.html</loc>
+      <lastmod>2025-02-14</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.9</priority>
+  </url>
+
+</urlset>
