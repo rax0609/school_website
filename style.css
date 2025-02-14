@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #60a5fa;
+    --secondary-color: #3b82f6;
+    --text-color: #f3f4f6;
+    --bg-color: #0f172a; /* 更深的黑色 */
+    --card-bg: rgba(255, 255, 255, 0.08); /* 毛玻璃背景 */
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --accent-color: #a78bfa; /* 新增裝飾色 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* 平滑滾動 */
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.7; /* 增加行高 */
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 960px; /* 調整容器寬度 */
+    width: 100%;
+    padding: 2rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 3rem 2rem;
+    background: var(--card-bg);
+    backdrop-filter: blur(15px); /* 毛玻璃效果 */
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 20px var(--shadow-color);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* 邊框 */
+}
+
+.header h1 {
+    color: var(--primary-color);
+    font-size: 2.75rem; /* 調整標題大小 */
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em; /* 增加字間距 */
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(15px); /* 毛玻璃效果 */
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 20px var(--shadow-color);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* 邊框 */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px var(--shadow-color);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.25rem;
+    font-size: 1.75rem;
+    border-bottom: 2px solid var(--accent-color); /* 使用裝飾色 */
+    padding-bottom: 0.75rem;
+}
+
+.card h3 {
+    color: var(--secondary-color);
+    margin: 1.25rem 0;
+    font-size: 1.3rem;
+}
+
+.card ul {
+    list-style-position: inside;
+    margin: 1rem 0;
+    padding-left: 1rem;
+}
+
+.card li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    background: var(--card-bg);
+    backdrop-filter: blur(15px); /* 毛玻璃效果 */
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 20px var(--shadow-color);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* 邊框 */
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* 動畫效果 */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RWD 調整 */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .header {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .header h1 {
+        font-size: 2.2rem;
+    }
+
+    .card {
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+}

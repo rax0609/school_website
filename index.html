@@ -1,11 +1,53 @@
-<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="「臺灣大專院校網站查詢系統」是一個整合了台灣各大專院校數位資源的平臺，專為學生、教職員以及訪客設計。通過此網站，用戶可以快速訪問各大學的學習管理系統（LMS）、圖書館入口及行政系統。">
-    <title>大專院校資源整合平台 - Futuracept</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="臺灣大專院校資源整合平台 - 提供全台大專院校數位資源連結，包含選課系統、圖書館、校務系統等便捷訪問服務。">
+    <meta name="keywords" content="大專院校,大學,資源整合,選課系統,圖書館,校務系統,台灣大學,成功大學,清華大學">
+    <meta name="author" content="Futuracept">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Futuracept - 臺灣大專院校資源整合平台">
+    <meta property="og:description" content="整合全台大專院校數位資源，提供便捷的校園系統訪問體驗。讓您輕鬆連結校園服務，實現智慧校園生活。">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://school.futuracept.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Futuracept - 臺灣大專院校資源整合平台">
+    <meta name="twitter:description" content="整合全台大專院校數位資源，提供便捷的校園系統訪問體驗。">
+    <meta name="twitter:image" content="logo.png">
+    
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="logo.png" as="image">
+    
+    <!-- Favicon -->
     <link rel="icon" href="logo.png" type="image/png"/>
+    <link rel="apple-touch-icon" href="logo.png">
+    
+    <title>大專院校資源整合平台 - Futuracept</title>
+
+    <!-- 結構化資料 Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Futuracept",
+      "description": "臺灣大專院校資源整合平台",
+      "url": "https://your-domain.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://your-domain.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
         
@@ -277,7 +319,7 @@
         <div class="content-wrapper">
             <div class="logo-container">
                 <div class="logo-circle">
-                    <div class="logo"></div>
+                    <div class="logo" role="img" aria-label="Futuracept Logo"></div>
                     <div class="logo-ring"></div>
                 </div>
             </div>
@@ -288,7 +330,7 @@
                 讓您輕鬆連結校園服務，實現智慧校園生活。
             </p>
             <div class="loading-container">
-                <div class="loading-bar">
+                <div class="loading-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
                     <div class="loading-progress"></div>
                 </div>
                 <div class="loading-text">載入中...</div>
@@ -299,15 +341,13 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
-                // 添加淡出動畫類
                 document.querySelector('#splash-screen').classList.add('fade-out');
                 document.querySelector('.content-wrapper').classList.add('fade-out');
                 document.querySelector('.background').classList.add('fade-out');
                 
-                // 等待動畫完成後再跳轉
                 setTimeout(() => {
                     window.location.href = 'main.html';
-                }, 800); // 與 CSS transition 時間相匹配
+                }, 800);
             }, 3000);
         });
     </script>

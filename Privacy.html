@@ -5,116 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>隱私權政策 - 台灣大專院校快速導航</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #60a5fa;
-            --secondary-color: #3b82f6;
-            --text-color: #e5e7eb;
-            --bg-color: #111827;
-            --card-bg: rgba(31, 41, 55, 0.8);
-        }
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-    
-        body {
-            font-family: 'Noto Sans TC', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background: linear-gradient(135deg, #1e1b4b, #1e3a8a);
-            min-height: 100vh;
-            padding: 2rem;
-        }
-    
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-    
-        .header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: rgba(31, 41, 55, 0.9);
-            backdrop-filter: blur(10px);
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-    
-        .header h1 {
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-    
-        .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border-radius: 1rem;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
-    
-        .card:hover {
-            transform: translateY(-5px);
-        }
-    
-        .card h2 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 0.5rem;
-        }
-    
-        .card ul {
-            list-style-position: inside;
-            margin: 1rem 0;
-            padding-left: 1rem;
-        }
-    
-        .card li {
-            margin-bottom: 0.5rem;
-        }
-    
-        .footer {
-            text-align: center;
-            margin-top: 3rem;
-            padding: 1rem;
-            background: rgba(31, 41, 55, 0.9);
-            backdrop-filter: blur(10px);
-            border-radius: 1rem;
-        }
-    
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-    
-            .header h1 {
-                font-size: 2rem;
-            }
-    
-            .card {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <header class="header">
+        <header class="header reveal">
             <h1>隱私權政策</h1>
             <p>台灣大專院校快速導航擴充功能</p>
         </header>
 
-        <div class="card">
+        <div class="card reveal">
             <h2>1. 資料收集與使用</h2>
             <p>本擴充功能僅收集必要的資訊以提供服務：</p>
             <ul>
@@ -125,7 +25,7 @@
             <p>我們不會收集、儲存或傳輸任何個人識別資訊。</p>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
             <h2>2. 權限使用說明</h2>
             <h3>tabs 權限</h3>
             <ul>
@@ -146,7 +46,7 @@
             </ul>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
             <h2>3. 資料安全性</h2>
             <p>我們採取以下措施確保資料安全：</p>
             <ul>
@@ -157,7 +57,7 @@
             </ul>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
             <h2>4. 第三方服務</h2>
             <p>本擴充功能僅使用：</p>
             <ul>
@@ -166,7 +66,7 @@
             <p>除此之外，不會使用任何其他第三方服務或外部資源。</p>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
             <h2>5. 使用者權利</h2>
             <p>作為使用者，您擁有以下權利：</p>
             <ul>
@@ -176,7 +76,7 @@
             </ul>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
             <h2>6. 更新政策</h2>
             <p>我們保留更新本隱私權政策的權利。重大更新時，將透過以下方式通知：</p>
             <ul>
@@ -185,10 +85,11 @@
             </ul>
         </div>
 
-        <footer class="footer">
+        <footer class="footer reveal">
             <p>最後更新時間：2025年1月20日</p>
             <p>如有任何問題，請透過 Chrome 線上應用程式商店聯絡我們</p>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
